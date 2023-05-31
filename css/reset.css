@@ -2,12 +2,29 @@
     padding: 0;
     margin: 0;
     box-sizing:border-box;
+    list-style: none;
+    font-family:var(--font-family);
+    text-decoration:none;
+    color:var(--branco);
 }
 
 
 
+body{
+    width: 100vw;
+    height: 100vh;
+    background:var(--azul-escuro);
+}
+
+
 :root{
-
     /* Cores */
+    --azul-escuro:#051933;
+    --azul:#167bf7;
+    --azul-claro:#6bd1ff;
+    --azul-degrade:linear-gradient(to bottom, var(--azul-escuro), var(--azul));
+    --branco:#ffffff;
 
+    /* Fontes */
+    --font-family:Lato;
 }

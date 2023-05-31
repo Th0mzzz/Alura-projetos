@@ -1,0 +1,58 @@
+/* HEADER */
+header{
+    background: var(--azul-escuro);
+    box-shadow: 2px 3px 5px black;
+    width: 100vw;
+    height: 70px;
+    position: relative;
+    top:0;
+}
+
+/* Logo */
+#logo-link{
+    display: flex;
+    align-items: center;
+    gap:.5rem;
+    font-size:Lato;
+    transition: all ease-in .2s;
+}
+#logo-link:hover{
+    transform:translateY(2px);
+}
+
+/* Menu-top itens */
+
+.menu-top__container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu-top__itens{
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+   height: 100%;
+}
+.item{
+    color: var(--branco);
+    font-size: 16px;
+    transition: all ease-in .2s;
+    cursor: pointer;
+    
+}
+.item:hover{
+    transform:translateY(2px);
+    color: var(--azul-claro);
+}
+
+/* Redes sociais */
+
+.social__container{
+
+
+}
+
+
