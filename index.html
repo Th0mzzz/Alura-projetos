@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
         
    
 
@@ -19,11 +25,26 @@
     <header class="header">
          <nav class="menu-top__container">
             
-                <a href="#" id="logo-link"><img id="alura-logo" src="img/alura-logo-white.svg" alt="alura-logo-white"></a>
+                <a href="https://www.alura.com.br/" id="logo-link"><img id="alura-logo" src="img/alura-logo-white.svg" alt="alura-logo-white"></a>
                 <ul class="menu-top__itens">
                     <li class="item"><a href="#"></a>Home</li>
-                    <li class="item"><a href="#"></a>Projetos Alura</li>
-                    <li class="item"><a href="#"></a>Meus projetos</li>
+                    <li id="form">
+                        <div class="form-btn">Formações<span class="seta-list"><i class="fa-solid fa-angle-up"></i></span></div>
+                        
+                        <div class="form-list__container fechado">
+                            <ul class="form-list__itens">
+                                <li class="form-list__item">
+                                    <i class="devicon-css3-plain"></i>
+                                    Formação CSS
+                                </li>
+                                <li class="form-list__item">
+                                    <i class="devicon-javascript-plain"></i>
+                                    Formação JS
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="item"><a href="">Meus projetos</a></li>
                 </ul>
                 <div class="social__container">
                     <a href="#" class="social__item"><i class="devicon-github-original"></i></a>
@@ -32,8 +53,8 @@
                 </div>
          </nav>
     </header>
-    <aside class="aside_menu">
-        <nav class="aside-menu__container">
+    <aside class="aside">
+        <nav class="aside_menu__container">
             <ul class="aside-menu__itens">
                 <li class="item"><a href="#"></a></li>
                 <li class="item"><a href="#"></a></li>
@@ -41,6 +62,16 @@
             </ul>
         </nav>
     </aside>
-    
+    <main class="main__container">
+        <section class="sobre__container">
+            <div class="sobre__content">
+                <img src="" alt="computador">
+            </div>
+        </section>
+
+
+
+    </main>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
