@@ -4,8 +4,9 @@ header{
     box-shadow: 1px 1px 5px black;
     width: 100vw;
     height: 70px;
-    position: relative;
+    position: fixed;
     top:0;
+    z-index: 1000;
 }
 
 /* Logo */
@@ -64,7 +65,7 @@ header{
     background:linear-gradient(to right,var(--azul),var(--azul-claro));
     width: 0%;
     height: 1px;
-    transition: all ease-in-out .4s;
+    transition: all ease-in-out .3s;
     
   }
   
@@ -74,9 +75,23 @@ header{
   
 /* formações botão */
 .form-btn{
+    position: relative;
     display: flex;
     gap:.2rem;
     align-items:center;
+}
+.form-btn::before{
+    position: absolute;
+    content: "";
+    left:0;
+    bottom: -2px;
+    width:0%;
+    height: 1px;
+    transition: all ease-in-out .3s;
+    background: linear-gradient(to right, var(--azul),var(--azul-claro));
+}
+.form-btn:hover::before{
+    width: 80%;
 }
 .seta-list > i {
     font-size:var(--font-link);
@@ -85,44 +100,36 @@ header{
 }
 .clicked > i{
     color:var(--azul-claro);
-    transform:rotate(0deg);
 }
 
 /* Formação lista */
-.fechado{
-    display: none;
-    transition: all ease-in .2s;
-}
-.aberto{
-    display: flex;
-    height:auto;
-    transition: all ease-in .2s;
-}
+
 .form-list__container{
     position: absolute;
     top:45px;
     left:-50%;
     background: var(--azul-escuro);
     width:220%;
-    height:auto;
-    border:solid var(--azul) 1px;
+    height:0;
     border-radius: 15px;
     transition: all ease-in-out .2s;
+    overflow: hidden;
 }
 .form-list__itens{
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     border-radius: 15px;
     overflow: hidden;
+    border:solid var(--azul) 1px;
 }
 .form-list__item{
-    position: relative;
     display: flex;
     gap: 1rem;
     width: 100%;
+    height: 100%;
     padding: 2rem;
     font-size: var(--font-link);
     transition: all ease-in-out .1s
@@ -134,8 +141,34 @@ header{
     font-size:25px;
     
 }
+/* Animação do formList */
+
+@keyframes Abrir {
+    from{
+        height: 0%;
+    }
+    to{
+        height:180px;
+    }
+}
+
+.abrir{
+    animation:Abrir .5s forwards;
+}
+@keyframes Fechar {
+    from{
+        height:180px;
+    }
+    to{
+        height: 0;
+    }
+}
+.fechar{
+    animation:Fechar .5s forwards;
+}
 
 /* Redes sociais */
+
 
 .social__container{
     display: flex;
@@ -149,11 +182,81 @@ header{
     transition: all ease-in-out .2s;
 }
 
-.social__item:hover{
-    transform: translateY(3px);
+.social__item::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    background:linear-gradient(to right,var(--azul),var(--azul-claro));
+    width: 0%;
+    height: 1px;
+    transition: all ease-in-out .3s;
+}
+.social__item:hover::before{
+    width:100%;
 }
 
+
 /* Menu - lateral */
+
+
 .aside{
     display: none;
+}
+
+
+
+/* Sobre o Repositório */
+
+main{
+    margin-top: 80px;
+}
+
+.sobre__container{
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    padding: 3rem;
+}
+
+
+/* PROGRAMMER SVG */
+
+#programmer-svg{
+    width:400px;
+    height:400px;
+    animation:Flutuar infinite 6s linear;
+}
+
+@keyframes Flutuar{
+    0%{
+        transform: translateY(0px)
+    }
+    50%{
+        transform: translateY(-12px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.sobre-text__container{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 40%;
+}
+
+.title{
+    color: var(--azul-claro);
+    font-size: var(--font-title);
+}
+.text{
+    color: var(--cinza-claro);
+    flex-wrap: wrap;
+    font-size: var(--font-text);
 }
