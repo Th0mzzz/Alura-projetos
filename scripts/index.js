@@ -7,11 +7,12 @@ formBtn.addEventListener('click', formList)
 formContainer.addEventListener('mouseleave',leaveFormList)
 
 function formList (){
+    
         if(setaList.classList.contains("clicked")){
             setaList.classList.remove('clicked')
             formContainer.classList.remove("abrir")
             formContainer.classList.add('fechar')
-    
+            
             setTimeout(function(){
                 formContainer.classList.remove("fechar")
                 formContainer.style.height = "0px"
@@ -25,7 +26,7 @@ function formList (){
 
             setTimeout(function(){
                 formContainer.classList.remove("abrir")
-                formContainer.style.height = "auto"
+                formContainer.style.height = "180px"
             },1000);
         }
 

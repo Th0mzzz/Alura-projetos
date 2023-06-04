@@ -6,6 +6,7 @@
     font-family:var(--font-family);
     text-decoration:none;
     color:var(--branco);
+    scroll-behavior: smooth;
 }
 
 
@@ -15,7 +16,10 @@ body{
     height: 100vh;
     overflow-x: hidden;
 }
-
+main{
+    display: flex;
+    flex-flow:column nowrap;
+}
 
 :root{
     /* Cores */
@@ -23,16 +27,15 @@ body{
     --azul:#167bf7;
     --azul-claro:#6bd1ff;
     --azul-selected:#6bd0ff77;
-    --azul-degrade:linear-gradient(to right, var(--azul-escuro), var(--azul));
     --branco:#ffffff;
     --cinza-claro:#c0c0c0;
 
     /* Fontes */
     --font-family:'Inter';
-    --font-links:18px;
-    --font-text:16px;
-    --font-subtitle:20px;
-    --font-title:28px;
+    --font-links:20px;
+    --font-text:18px;
+    --font-subtitle:22px;
+    --font-title:30px;
 }
 
 ::-webkit-scrollbar{
