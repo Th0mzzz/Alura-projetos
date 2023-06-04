@@ -5,6 +5,7 @@ let formItens = document.querySelectorAll(".form-list__item");
 
 formBtn.addEventListener('click', formList)
 formContainer.addEventListener('mouseleave',leaveFormList)
+
 function formList (){
         if(setaList.classList.contains("clicked")){
             setaList.classList.remove('clicked')

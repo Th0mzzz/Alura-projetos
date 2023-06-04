@@ -40,10 +40,18 @@ body{
     z-index: -1;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: var(--azul-claro);
+    background:linear-gradient(to bottom, var(--azul),var(--azul-claro));
     border-radius: 15px;
 }
 ::-webkit-scrollbar-track{
     background: var(--azul-escuro);
 }
 
+.link{
+    color: var(--azul);
+    transition: color ease-in-out .1s;
+}
+.link:hover{
+    color: var(--azul-claro);
+    text-decoration: underline;
+}
