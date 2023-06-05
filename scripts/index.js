@@ -64,5 +64,26 @@ const prev = document.querySelector("#prev");
 const next = document.querySelector("#next");
 const inner = document.querySelector(".carousel__inner");
 
-for(let i =0; i<)
+for(let i = 0; i ,i <itens.length; i++){
+
+
+ if(itens[i].classList.contains('current')){
+
+    itens[i].classList.remove("current")
+
+    itens[atual].classList.add('current')
+
+ }
+
+
+ function rolarDireita (atual){
+    current = atual
+
+ }
+
+
+
+
+}
+
     
