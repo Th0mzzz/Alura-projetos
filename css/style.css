@@ -292,22 +292,15 @@ header{
 }
 
 .form__container{
+    position: relative;
     width: 100%;
-    height: 450px;
+    height: 400px;
     overflow: hidden;
+    
 }
 
 
 /* Formação Carousel */
-
-.form-carousel__container{
-    position: relative;
-    width: 100%;
-    height: 90%;
-    background-color:var(--branco);
-    overflow: hidden;
-}
-
 .arrow{
     color: var(--branco);
     font-size: var(--font-title);
@@ -339,5 +332,19 @@ header{
     position:absolute;
     right: 0;
     z-index: 120;
+}
+
+.carousel__inner{
+    display: flex;
+    height: 100%;
+    transition: transform ease-in .2s;  
+    gap: 1rem;
+}
+.projeto{
+    flex:0 0 60%;
+    max-width:100%;
+    height:90%;
+    background: var(--azul);
+    border-radius: 20px;
 }
 

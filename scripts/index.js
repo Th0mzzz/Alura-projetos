@@ -1,3 +1,8 @@
+
+//---------------- HEADER -------------------
+
+// Lista de formações no menu
+
 let formBtn = document.querySelector(".form-btn");
 let setaList = document.querySelector(".seta-list");
 let formContainer = document.querySelector(".form-list__container");
@@ -44,3 +49,20 @@ function leaveFormList(){
                 
             },1000);
 }
+
+
+
+
+
+
+// -------------MAIN-------------
+
+//  Carrosel
+const carContainer = document.querySelector(".form__container");
+const itens = document.querySelectorAll(".projeto");
+const prev = document.querySelector("#prev");
+const next = document.querySelector("#next");
+const inner = document.querySelector(".carousel__inner");
+
+for(let i =0; i<)
+    
