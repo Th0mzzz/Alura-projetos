@@ -64,5 +64,4 @@ const prev = document.querySelector("#prev");
 const next = document.querySelector("#next");
 const inner = document.querySelector(".carousel__inner");
 
-for(let i =0; i<)
     
