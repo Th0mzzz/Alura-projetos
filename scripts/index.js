@@ -57,33 +57,52 @@ function leaveFormList(){
 
 // -------------MAIN-------------
 
-//  Carrosel
-const carContainer = document.querySelector(".form__container");
+
+//carrosel
+const inner = document.querySelector(".carousel__inner");
 const itens = document.querySelectorAll(".projeto");
 const prev = document.querySelector("#prev");
 const next = document.querySelector("#next");
-const inner = document.querySelector(".carousel__inner");
+let atual = 0;
 
-for(let i = 0; i ,i <itens.length; i++){
+function mostrarItem(atual) {
 
-
- if(itens[i].classList.contains('current')){
-
-    itens[i].classList.remove("current")
-
-    itens[atual].classList.add('current')
-
- }
-
-
- function rolarDireita (atual){
-    current = atual
-
- }
-
-
-
-
+ const itemWidth = itens[atual].offsetWidth;
+  const translateX = -itemWidth * atual;
+  inner.style.transform = `translateX(${translateX}px)`;
+  // Remova a classe "current" de todos os itens
+  itens.forEach((item) => item.classList.remove("current"));
+  // Adicione a classe "current" ao item atual
+  itens[atual].classList.add("current");
 }
+
+function rolarDireita() {
+    atual++;
+
+  // Verifique se chegou ao final dos itens e volte para o primeiro
+  if (atual >= itens.length) {
+    atual = 0;
+    
+  }
+  mostrarItem(atual);
+}
+
+function rolarEsquerda() {
+  atual--;
+  // Verifique se voltou para o início e vá para o último item
+  if (atual < 0) {
+    atual = itens.length - 1;
+  }
+  mostrarItem(atual);
+}
+
+// Adicione os ouvintes de evento aos botões "prev" e "next"
+prev.addEventListener("click", rolarEsquerda);
+next.addEventListener("click", rolarDireita);
+
+// Exiba o primeiro item inicialmente
+mostrarItem(atual);
+
+
 
     

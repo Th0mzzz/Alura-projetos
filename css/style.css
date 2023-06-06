@@ -335,18 +335,22 @@ header{
 }
 
 .carousel__inner{
-    display: flex;
+    position: relative;
+    display:flex;
     height: 100%;
-    transition: transform ease-in .2s;  
+    transition: transform ease-in .3s;  
     gap: 1rem;
+    align-items: center;
+    padding-left:2rem ;
 }
 .projeto{
-    margin:auto;
-    flex:0 0 40%;
-    max-width:100%;
-    height:80%;
+    position: relative;
+    flex:0 0 100%;
+    max-width:1000px;
+    height:90%;
     background: var(--azul);
     border-radius: 20px;
+    transition: all ease-in-out .3s;
 }
 
 .current{
