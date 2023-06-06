@@ -341,10 +341,16 @@ header{
     gap: 1rem;
 }
 .projeto{
-    flex:0 0 60%;
+    margin:auto;
+    flex:0 0 40%;
     max-width:100%;
-    height:90%;
+    height:80%;
     background: var(--azul);
     border-radius: 20px;
+}
+
+.current{
+    transform:translateY(-10px);
+    box-shadow: 3px 3px 5px black;
 }
 
