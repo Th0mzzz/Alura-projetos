@@ -65,7 +65,7 @@ header{
     background:linear-gradient(to right,var(--azul),var(--azul-claro));
     width: 100%;
     height: 1px;
-    transition: all ease-in-out .2s;
+    transition: all ease-in-out .3s;
     transform: scaleX(0%);
   }
   
@@ -80,19 +80,8 @@ header{
     gap:.2rem;
     align-items:center;
 }
-.form-btn::before{
-    position: absolute;
-    content: "";
-    left:0;
-    bottom: -2px;
-    width:100%;
-    height: 1px;
-    transition: all ease-in-out .2s;
-    background: linear-gradient(to right, var(--azul),var(--azul-claro));
-    transform: scaleX(0%);
-}
-.form-btn:hover::before{
-    transform: scaleX(100%);
+.form-btn:hover > .seta-list > i {
+    color:var(--azul-claro);
 }
 .seta-list > i {
     font-size:var(--font-link);
@@ -197,164 +186,3 @@ header{
 .social__item:hover::before{
     transform: scaleX(100%);
 }
-
-
-/* Menu - lateral */
-
-
-.aside{
-    display: none;
-}
-
-
-
-/* Sobre o Repositório */
-
-
-.sobre__container{
-    position: relative;
-    top: 200px;
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-flow: row wrap;
-    
-}
-
-
-/* PROGRAMMER SVG */
-
-#programmer-svg{
-    width:400px;
-    height:400px;
-    animation:Flutuar infinite 6s linear;
-}
-
-@keyframes Flutuar{
-    0%{
-        transform: translateY(0px)
-    }
-    50%{
-        transform: translateY(-12px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
-
-/* Texto sobre o repositorio */
-.sobre-text__container{
-    display: flex;
-    flex-flow: column nowrap;
-    width: 40%;
-}
-
-.title{
-    width: auto;
-    color: var(--azul-claro);
-    font-size: var(--font-title);
-    
-}
-.subtitle{
-    width: auto;
-    color: var(--branco);
-    font-size: var(--font-subtitle);
-}
-.text{
-    color: var(--cinza-claro);
-    flex-wrap: wrap;
-    font-size: var(--font-text);
-}
-
-/* Formações */
-.formacoes__container{
-    position: relative;
-    top:500px;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 3rem;
-    background: var(--azul-escuro);
-    padding:3rem 0rem 3rem 3rem ;
-}
-.formacoes__content{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    gap: 5rem;
-}
-.form-apresentacao__container{
-    display: flex;
-    flex-flow: column wrap;
-}
-
-.form__container{
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    
-}
-
-
-/* Formação Carousel */
-.arrow{
-    color: var(--branco);
-    font-size: var(--font-title);
-    font-weight: bolder;
-    border: none;
-    width: 60px;
-    height:100%;
-    cursor: pointer;
-    transition: transform ease-in .2s;
-}
-.arrow > i{
-    transition: transform ease-in-out .2s;
-}
-.arrow:hover > i{
-    transform:translateX(-5px);
-}
-.next:hover > i {
-    transform:translateX(5px);
-}
-.prev{
-    background: linear-gradient(to right,var(--azul-escuro), transparent);
-    position:absolute;
-    left: 0;
-    z-index: 120;
-
-}
-.next{
-    background: linear-gradient(to left,var(--azul-escuro), transparent);
-    position:absolute;
-    right: 0;
-    z-index: 120;
-}
-
-.carousel__inner{
-    position: relative;
-    display:flex;
-    height: 100%;
-    transition: transform ease-in .3s;  
-    gap: 1rem;
-    align-items: center;
-    padding-left:2rem ;
-}
-.projeto{
-    position: relative;
-    flex:0 0 100%;
-    max-width:1000px;
-    height:90%;
-    background: var(--azul);
-    border-radius: 20px;
-    transition: all ease-in-out .3s;
-}
-
-.current{
-    transform:translateY(-10px);
-    box-shadow: 3px 3px 5px black;
-}
-

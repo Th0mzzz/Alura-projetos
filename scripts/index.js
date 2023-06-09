@@ -59,10 +59,9 @@ function leaveFormList(){
 
 
 //carrosel
-const inner = document.querySelector(".carousel__inner");
-const itens = document.querySelectorAll(".projeto");
-const prev = document.querySelector("#prev");
-const next = document.querySelector("#next");
+
+function carousel (inner, itens , prev , next){
+
 let atual = 0;
 
 function mostrarItem(atual) {
@@ -103,6 +102,19 @@ next.addEventListener("click", rolarDireita);
 // Exiba o primeiro item inicialmente
 mostrarItem(atual);
 
+}
 
+const inner1 = document.querySelector(".carousel__inner");
+const itens1 = document.querySelectorAll(".projeto");
+const prev1 = document.querySelector("#prev");
+const next1 = document.querySelector("#next");
 
+carousel(inner1,itens1,prev1,next1);
+
+const inner2 = document.querySelector(".carousel__inner2");
+const itens2 = document.querySelectorAll(".projeto2");
+const prev2 = document.querySelector("#prev2");
+const next2 = document.querySelector("#next2");
+
+carousel(inner2,itens2,prev2,next2);
     

@@ -1,0 +1,68 @@
+/* Menu - lateral */
+
+
+.aside{
+    display: none;
+}
+
+
+
+/* Sobre o Repositório */
+
+
+.sobre__container{
+    position: relative;
+    top: 200px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    grid-area:sobre;
+}
+
+
+/* PROGRAMMER SVG */
+
+#programmer-svg{
+    width:400px;
+    height:400px;
+    animation:Flutuar infinite 6s linear;
+}
+
+@keyframes Flutuar{
+    0%{
+        transform: translateY(0px)
+    }
+    50%{
+        transform: translateY(-12px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* Texto sobre o repositorio */
+.sobre-text__container{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 40%;
+}
+
+.title{
+    width: auto;
+    color: var(--azul-claro);
+    font-size: var(--font-title);
+    
+}
+.subtitle{
+    width: auto;
+    color: var(--branco);
+    font-size: var(--font-subtitle);
+}
+.text{
+    color: var(--cinza-claro);
+    flex-wrap: wrap;
+    font-size: var(--font-text);
+}
