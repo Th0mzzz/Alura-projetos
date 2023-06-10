@@ -44,7 +44,7 @@
 .projeto{
     position: relative;
     flex:0 0 60%;
-    max-width:100%;
+    max-width:50%;
     height:90%;
     background: var(--azul);
     border-radius: 20px;
@@ -83,8 +83,8 @@
 }
 .projeto2{
     position: relative;
-    flex:0 0 60%;
-    max-width:100%;
+    flex:0 0 100%;
+    max-width:50%;
     height:90%;
     background: var(--azul);
     border-radius: 20px;

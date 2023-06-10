@@ -73,6 +73,7 @@ function mostrarItem(atual) {
   itens.forEach((item) => item.classList.remove("current"));
   // Adicione a classe "current" ao item atual
   itens[atual].classList.add("current");
+  
 }
 
 function rolarDireita() {
@@ -101,6 +102,7 @@ next.addEventListener("click", rolarDireita);
 
 // Exiba o primeiro item inicialmente
 mostrarItem(atual);
+
 
 }
 
