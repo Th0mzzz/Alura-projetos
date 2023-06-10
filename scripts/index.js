@@ -118,3 +118,25 @@ const next2 = document.querySelector("#next2");
 
 carousel(inner2,itens2,prev2,next2);
     
+
+
+function hoverMore(projetos){
+
+projetos.forEach(projeto => {
+
+  const more = projeto.querySelector('.more');
+
+  projeto.addEventListener('mouseover', () => {
+    more.classList.add('visivel');
+  });
+
+  projeto.addEventListener('mouseout', () => {
+    more.classList.remove('visivel');
+  });
+});
+
+}
+
+hoverMore(itens1)
+hoverMore(itens2)
+
