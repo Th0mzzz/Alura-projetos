@@ -22,8 +22,25 @@ main{
     height: 100vh;
     display: flex;
     flex-flow: column nowrap;
-    gap: 20rem;
+    gap: 10rem;
 }
+.title{
+    width: auto;
+    color: var(--azul-claro);
+    font-size: var(--font-title);
+    
+}
+.subtitle{
+    width: auto;
+    color: var(--branco);
+    font-size: var(--font-subtitle);
+}
+.text{
+    color: var(--cinza-claro);
+    flex-wrap: wrap;
+    font-size: var(--font-text);
+}
+
 
 :root{
     /* Cores */

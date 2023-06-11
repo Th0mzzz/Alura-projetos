@@ -8,7 +8,7 @@
     gap: 3rem;
     background: var(--azul-escuro);
     padding:3rem 0rem 3rem 3rem ;
-    grid-area: form;
+    box-shadow: 3px 4px 5px black;
 }
 .formacoes__content{
     display: flex;

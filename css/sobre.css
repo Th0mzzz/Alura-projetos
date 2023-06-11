@@ -12,7 +12,7 @@
 
 .sobre__container{
     position: relative;
-    top: 200px;
+    margin-top:200px;
     width: 100%;
     height: auto;
     display: flex;
@@ -50,19 +50,3 @@
     width: 40%;
 }
 
-.title{
-    width: auto;
-    color: var(--azul-claro);
-    font-size: var(--font-title);
-    
-}
-.subtitle{
-    width: auto;
-    color: var(--branco);
-    font-size: var(--font-subtitle);
-}
-.text{
-    color: var(--cinza-claro);
-    flex-wrap: wrap;
-    font-size: var(--font-text);
-}
