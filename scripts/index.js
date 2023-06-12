@@ -22,7 +22,7 @@ function formList (){
                 formContainer.classList.remove("fechar")
                 formContainer.style.height = "0px"
                 
-            },1000);
+            },2000);
 
         }else{
             setaList.classList.add('clicked')
@@ -32,7 +32,7 @@ function formList (){
             setTimeout(function(){
                 formContainer.classList.remove("abrir")
                 formContainer.style.height = "180px"
-            },1000);
+            },2000);
         }
 
        
