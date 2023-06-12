@@ -100,7 +100,7 @@
     display: flex;
     justify-content: end;
     align-items: end;
-    background:rgba(0, 0, 0, 0.342);
+    background:#00000057;
     transition: all ease-in-out .4s;
     transform: translateY(100%);
 }

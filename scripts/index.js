@@ -22,7 +22,7 @@ function formList (){
                 formContainer.classList.remove("fechar")
                 formContainer.style.height = "0px"
                 
-            },1000);
+            },2000);
 
         }else{
             setaList.classList.add('clicked')
@@ -32,7 +32,7 @@ function formList (){
             setTimeout(function(){
                 formContainer.classList.remove("abrir")
                 formContainer.style.height = "180px"
-            },1000);
+            },2000);
         }
 
        
@@ -66,11 +66,16 @@ let atual = 0;
 
 function mostrarItem(atual) {
 
- const itemWidth = itens[atual].offsetWidth;
-  const translateX = -itemWidth * atual;
+ const itemWidth = itens[atual].offsetWidth; 
+
+  const translateX = -itemWidth * atual; console.log(translateX)
+
   inner.style.transform = `translateX(${translateX}px)`;
+
   // Remova a classe "current" de todos os itens
+
   itens.forEach((item) => item.classList.remove("current"));
+
   // Adicione a classe "current" ao item atual
   itens[atual].classList.add("current");
   
@@ -103,8 +108,10 @@ next.addEventListener("click", rolarDireita);
 // Exiba o primeiro item inicialmente
 mostrarItem(atual);
 
-
 }
+
+
+
 
 const inner1 = document.querySelector(".carousel__inner");
 const itens1 = document.querySelectorAll(".projeto");

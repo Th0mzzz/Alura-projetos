@@ -1,9 +1,3 @@
-/* Menu - lateral */
-.aside{
-    display: none;
-}
-
-
 
 /* Sobre o Repositório */
 
@@ -18,6 +12,7 @@
     justify-content: space-around;
     flex-flow: row wrap;
     grid-area:sobre;
+    
 }
 
 
@@ -46,5 +41,8 @@
     display: flex;
     flex-flow: column nowrap;
     width: 40%;
+    background:var(--azul-escuro);
+    padding:5rem 4rem 5rem 4rem;
+    border-radius:50px 150px 150px 50px ;
 }
 
