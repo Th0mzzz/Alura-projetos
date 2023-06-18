@@ -1,0 +1,26 @@
+footer{
+    display: flex;
+    flex-flow: column wrap;
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    padding: 2rem;
+    background: var(--azul-escuro);
+}
+.footer__content{
+    display: flex;
+    width: 100%;
+}
+.footer__content > #logo-link{
+    position: absolute ;
+    left: 50%;
+    align-self: center;
+}
+.link_list{
+    min-width: 40%;
+    border-right: 1px solid var(--branco);
+}
+.link_list > li > a:hover{
+    color: var(--azul-claro);
+}

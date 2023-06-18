@@ -40,7 +40,7 @@
 .sobre-text__container{
     display: flex;
     flex-flow: column nowrap;
-    width: 40%;
+    min-width: 50%;
     background:var(--azul-escuro);
     padding:5rem 4rem 5rem 4rem;
     border-radius:50px 150px 150px 50px ;

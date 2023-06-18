@@ -58,94 +58,11 @@ function leaveFormList(){
 // -------------MAIN-------------
 
 
-//carrosel
-
-function carousel (inner, itens , prev , next){
-
-let atual = 0;
-
-function mostrarItem(atual) {
-
- const itemWidth = itens[atual].offsetWidth; 
-
-  const translateX = -itemWidth * atual; console.log(translateX)
-
-  inner.style.transform = `translateX(${translateX}px)`;
-
-  // Remova a classe "current" de todos os itens
-
-  itens.forEach((item) => item.classList.remove("current"));
-
-  // Adicione a classe "current" ao item atual
-  itens[atual].classList.add("current");
-  
-}
-
-function rolarDireita() {
-    atual++;
-
-  // Verifique se chegou ao final dos itens e volte para o primeiro
-  if (atual >= itens.length) {
-    atual = 0;
-    
-  }
-  mostrarItem(atual);
-}
-
-function rolarEsquerda() {
-  atual--;
-  // Verifique se voltou para o início e vá para o último item
-  if (atual < 0) {
-    atual = itens.length - 1;
-  }
-  mostrarItem(atual);
-}
-
-// Adicione os ouvintes de evento aos botões "prev" e "next"
-prev.addEventListener("click", rolarEsquerda);
-next.addEventListener("click", rolarDireita);
-
-// Exiba o primeiro item inicialmente
-mostrarItem(atual);
-
-}
 
 
 
 
-const inner1 = document.querySelector(".carousel__inner");
-const itens1 = document.querySelectorAll(".projeto");
-const prev1 = document.querySelector("#prev");
-const next1 = document.querySelector("#next");
-
-carousel(inner1,itens1,prev1,next1);
-
-const inner2 = document.querySelector(".carousel__inner2");
-const itens2 = document.querySelectorAll(".projeto2");
-const prev2 = document.querySelector("#prev2");
-const next2 = document.querySelector("#next2");
-
-carousel(inner2,itens2,prev2,next2);
     
 
 
-function hoverMore(projetos){
-
-projetos.forEach(projeto => {
-
-  const more = projeto.querySelector('.more');
-
-  projeto.addEventListener('mouseover', () => {
-    more.classList.add('visivel');
-  });
-
-  projeto.addEventListener('mouseout', () => {
-    more.classList.remove('visivel');
-  });
-});
-
-}
-
-hoverMore(itens1)
-hoverMore(itens2)
 
