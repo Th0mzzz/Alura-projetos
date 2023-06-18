@@ -40,15 +40,14 @@
     transition: transform ease-in .3s;  
     gap: 2rem;
     align-items: center;
+    
 }
 .projeto{
     opacity: .5;
     position: relative;
     flex:0 0 60%;
-    min-width:80%;
     max-width:100%;
     height:80%;
-    background: var(--azul);
     border-radius: 15px;
     transition: all ease-in-out .3s;
     overflow: hidden;
@@ -56,7 +55,9 @@
 .projeto:hover{
     opacity: 1;
 }
-
+.img__projeto{
+    display: none;
+}
 .current{
     opacity: 1;
     transform:translateY(-8px);
@@ -71,7 +72,13 @@
     justify-content: end;
     align-items: end;
     transition: all ease-in-out .6s;
-    
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5);
+}
+.more > h2 {
+    position: absolute;
+    left:30px;
+    top: 20px;
 }
 .visivel{
     opacity: 1;

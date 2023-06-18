@@ -29,22 +29,21 @@ function carrosel(inner){
       }
 
     projetos.forEach(projeto => {
-      
       const more = projeto.querySelector('.more');
-
+      const img = projeto.querySelector(".img__projeto").src;
+      projeto.style.background = `url('${img}')`
+      projeto.style.backgroundRepeat = 'no-repeat'
+      projeto.style.backgroundSize = 'cover'
+      projeto.style.position = 'center'
       projeto.addEventListener('mouseover', () => {
         more.style.opacity = "1"
+        
       });
-
       projeto.addEventListener('mouseout', () => {
         more.style.opacity = '0'
 
       });
     });
-        
-        
-        
-    
-    };
+};
 
 

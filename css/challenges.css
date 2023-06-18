@@ -5,6 +5,7 @@
     flex-flow: column wrap;
     align-items: center;
     justify-content: left;
+    margin-bottom:10rem;
 }
 .challenges__sobre{
     background:var(--azul-escuro);
@@ -74,4 +75,11 @@
     font-size: 50px;
     margin: auto;
     text-shadow: 1px 1px 4px var(--cinza-claro);
+}
+.bloqueado > span {
+    position: absolute;
+    left: 50%;
+    bottom: 40%;
+    transform: translate(-50%,-50%);
+    font-size:var(--font-subtitle);
 }
